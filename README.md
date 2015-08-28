@@ -16,9 +16,7 @@ URL: `https://github.com/SKEPT1K/Pfetch`
 
 `fetch(url, regex, encodeComponent)` 
 
-1. Both regex and encodeComponent are optional parameters.
-    a. regex default = /([A-Z])+/ig
-    b. encodeComponent default = true
+parameters [string] url, [object] regex (optional), [bool] encodeComponent (optional)
 
 ```
 var parameters;

@@ -8,14 +8,29 @@ URL: `https://github.com/SKEPT1K/Pfetch`
 
 ## Installation
 
-  npm install `Pfetch`
+1. Download the module from github at: `https://github.com/SKEPT1K/Pfetch`
+2. Put the module into the directory holding JavaScript.
+3. `include` or `require` the module in your code.
 
 ## Usage
 
-  var Pfetch = require('Pfetch')
-  parameters = Pfetch.fetch
+`fetch(url, regex, encodeComponent)` 
 
-  console.log(parameters);
+1. Both regex and encodeComponent are optional parameters.
+    a. regex default = /([A-Z])+/ig
+    b. encodeComponent default = true
+
+```
+var parameters;
+parameters = fetch("http://127.0.0.1:8080/?param1=a&param2=aa&param3=aaa", /([A-Z])+/ig, false);
+console.log(parameters);
+
+// Returns [param1: "a", param2: "aa", param3: "aaa"]
+
+console.log(parameters["param1"]);
+
+// "a"
+```
 
 ## Contributing
 
@@ -24,3 +39,11 @@ Please download, alter, change and tear apart as you see fit.  If you have any i
 ## Release History
 
 * 1.0.0 Initial release
+* 1.0.1 Hotfix
+
+## Changelog
+
+(1.0.1) - General bugfix and consolidation of the module.
+    * Refocused the default regex.
+    * Fixed logic errors in for loop.
+    * Added more detailed in code commenting.

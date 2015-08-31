@@ -9,7 +9,7 @@ URL: `https://github.com/SKEPT1K/Pfetch`
 ## Installation
 
 1. Download the file from github at: `https://github.com/SKEPT1K/Pfetch`
-2. Reference the file via HTML <script type="text/javascript" src="Pfetch.js" />
+2. Reference the file via HTML `<script type="text/javascript" src="Pfetch.js" />`
 
 ## Usage
 

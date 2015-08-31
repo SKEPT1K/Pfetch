@@ -8,17 +8,22 @@ URL: `https://github.com/SKEPT1K/Pfetch`
 
 ## Installation
 
-1. Download the module from github at: `https://github.com/SKEPT1K/Pfetch`
-2. Put the module into the directory holding JavaScript.
-3. `include` or `require` the module in your code.
+1. Download the file from github at: `https://github.com/SKEPT1K/Pfetch`
+2. Reference the file via HTML <script type="text/javascript" src="Pfetch.js" />
 
 ## Usage
 
 `fetch(url, regex, encodeComponent)` 
 
-parameters [string] url, [object] regex (optional), [bool] encodeComponent (optional)
+parameters [string] url, [RegEx object] regex (optional), [bool] encodeComponent (optional)
 
-```
+* URL:  A string including domain and parameters.
+* regex: A JavaScript RegEx object.  Used for whitelisting characters.  Useful for clientside validation.
+* encodeComponent:  A flag to enforce either encodeURI (false) or encodeURIComponent (true).
+   1. encodeURI: encodes special characters except: , / ? : @ & = + $ #
+   2. encodeURIComponent: encodes all special characters.
+
+```Javascript
 var parameters;
 parameters = fetch("http://127.0.0.1:8080/?param1=a&param2=aa&param3=aaa", /([A-Z])+/ig, false);
 console.log(parameters);
